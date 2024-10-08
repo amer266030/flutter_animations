@@ -14,11 +14,11 @@ class AppThemes {
       titleSmall: TextStyle(
           fontSize: 18,
           color: AppColors.lightText3,
-          fontWeight: FontWeight.w500),
+          fontWeight: FontWeight.bold),
       titleMedium: TextStyle(
           fontSize: 20,
           color: AppColors.lightText2,
-          fontWeight: FontWeight.w600),
+          fontWeight: FontWeight.bold),
       titleLarge: TextStyle(
           fontSize: 22,
           color: AppColors.lightText1,
@@ -35,6 +35,18 @@ class AppThemes {
       bodySmall: TextStyle(fontSize: 12, color: AppColors.darkText3),
       bodyMedium: TextStyle(fontSize: 14, color: AppColors.darkText2),
       bodyLarge: TextStyle(fontSize: 16, color: AppColors.darkText1),
+      titleSmall: TextStyle(
+          fontSize: 18,
+          color: AppColors.darkText3,
+          fontWeight: FontWeight.bold),
+      titleMedium: TextStyle(
+          fontSize: 20,
+          color: AppColors.darkText2,
+          fontWeight: FontWeight.bold),
+      titleLarge: TextStyle(
+          fontSize: 22,
+          color: AppColors.darkText1,
+          fontWeight: FontWeight.bold),
     ),
     brightness: Brightness.dark,
   );
