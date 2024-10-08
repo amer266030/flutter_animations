@@ -1,6 +1,7 @@
 import 'package:animations/home/home_cubit.dart';
 import 'package:animations/home/subviews/content_view.dart';
 import 'package:animations/home/subviews/toggle_switch_view.dart';
+import 'package:animations/theme_data/extensions/text_style_ext.dart';
 import 'package:animations/theme_data/extensions/theme_ext.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -16,7 +17,10 @@ class HomeScreen extends StatelessWidget {
         final cubit = context.read<HomeCubit>();
         return Scaffold(
           backgroundColor: context.bg1,
-          appBar: AppBar(backgroundColor: context.bg1),
+          appBar: AppBar(
+              backgroundColor: context.bg2,
+              title: Text('Home', style: context.titleLarge),
+              centerTitle: true),
           body: SafeArea(
             child: Padding(
               padding: const EdgeInsets.all(24),

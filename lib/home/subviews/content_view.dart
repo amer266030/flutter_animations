@@ -15,7 +15,8 @@ class ContentView extends StatelessWidget {
             aspectRatio: 1,
             child: Card(
               color: context.bg2,
-              elevation: 6,
+              elevation: 4,
+              shadowColor: context.textColor3.withOpacity(0.5),
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Column(
@@ -36,7 +37,8 @@ class ContentView extends StatelessWidget {
             aspectRatio: 1,
             child: Card(
               color: context.bg2,
-              elevation: 6,
+              elevation: 4,
+              shadowColor: context.textColor3.withOpacity(0.5),
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Column(
