@@ -7,6 +7,7 @@ environment:
   sdk: ^3.5.3
 
 dependencies:
+  easy_localization: ^3.0.7
   flutter:
     sdk: flutter
   flutter_bloc: ^8.1.6
@@ -19,3 +20,6 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  assets:
+    - assets/translations/ar-SA.json
+    - assets/translations/en-US.json

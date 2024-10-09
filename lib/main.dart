@@ -1,11 +1,22 @@
 import 'package:animations/home/home_screen.dart';
 import 'package:animations/theme_data/app_theme_cubit.dart';
 import 'package:animations/theme_data/app_themes.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-void main() {
-  runApp(const MainApp());
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await EasyLocalization.ensureInitialized();
+
+  runApp(
+    EasyLocalization(
+        supportedLocales: const [Locale('en', 'US'), Locale('ar', 'SA')],
+        path: 'assets/translations',
+        fallbackLocale: const Locale('en', 'US'),
+        child: const MainApp()),
+  );
+  // runApp(const MainApp());
 }
 
 class MainApp extends StatelessWidget {
@@ -22,6 +33,10 @@ class MainApp extends StatelessWidget {
             theme: AppThemes.lightTheme,
             darkTheme: AppThemes.darkTheme,
             themeMode: themeMode,
+            locale: context.locale, // From EasyLocalization
+            supportedLocales: context.supportedLocales, // From EasyLocalization
+            localizationsDelegates:
+                context.localizationDelegates, // From EasyLocalization
             home: const HomeScreen(),
           );
         },
