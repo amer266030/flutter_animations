@@ -7,8 +7,9 @@ class ContentView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return OrientationBuilder(
-      builder: (BuildContext context, Orientation orientation) {
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        var orientation = MediaQuery.of(context).orientation;
         return Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -37,7 +38,7 @@ class ContentView extends StatelessWidget {
             const SizedBox(width: 16),
             Expanded(
               child: AspectRatio(
-                aspectRatio: 1,
+                aspectRatio: (orientation == Orientation.portrait) ? 1 : 3,
                 child: Card(
                   color: context.bg2,
                   elevation: 4,
